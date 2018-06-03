@@ -1,11 +1,14 @@
 # js-interceptor
 
-JavaScript 应用拦截器实现
+A JavaScript application interceptor implementation.
 
+**npm**
 
 ```ls
 npm install -S js-interceptor
 ```
+
+**use**
 
 ```js
 import interceptor from 'js-interceptor'

@@ -6,20 +6,20 @@
 * @return {Function}
 **/
 module.exports = function interceptor (middlewares) {
-  if (!Array.isArray(middlewares)) throw new TypeError('Middleware stack must be an array!')
-  for (const fn of middlewares) {
-    if (typeof fn !== 'function') throw new TypeError('Middleware must be composed of functions!')
+  if (Object.prototype.toString.call(middlewares) !== '[object Array]') throw new TypeError('Middleware stack must be an array!')
+  for (var fi in middlewares) {
+    if (typeof middlewares[fi] !== 'function') throw new TypeError('Middleware must be composed of functions!')
   }
   
   return function (content, next) {
-    let index = -1
+    var index = -1
     function dispatch (i) {
       if (i <= index) throw new Error('next() called multiple times')
       index = i
       if (i >= middlewares.length) {
         return next(content)
       }
-      let fn = middlewares[i]
+      var fn = middlewares[i]
 
       fn(content, function () {
         dispatch(i + 1)
