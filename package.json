@@ -1,0 +1,27 @@
+{
+  "name": "js-interceptor",
+  "version": "1.0.0",
+  "description": "A JavaScript application interceptor implementation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    ".gitignore",
+    "test/*",
+    "yarn.lock"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mengdu/js-interceptor.git"
+  },
+  "keywords": [
+    "interceptor"
+  ],
+  "author": "lanyue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mengdu/js-interceptor/issues"
+  },
+  "homepage": "https://github.com/mengdu/js-interceptor#readme"
+}
